@@ -13,6 +13,8 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="preload" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- <link rel="preconnect" as="font"href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="font/woff2" crossorigin /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Yesteryear&display=swap" rel="stylesheet"> 
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/css/grid.min.css">
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/css/style.min.css">
@@ -29,6 +31,29 @@
     <!-- <link rel="preload" as="script" type="text/javascript" crossorigin href="/js/jquery-migrate-1.2.1.js" > -->
     <script type="text/javascript" src="/js/jquery.js" id="jquery_script_tag"></script>
     <script src="/js/jquery-migrate-1.2.1-min.js"></script>
+    
+    <script type="text/javascript">
+        jQuery.event.special.touchstart = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+    }
+};
+jQuery.event.special.touchmove = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+    }
+};
+jQuery.event.special.wheel = {
+    setup: function( _, ns, handle ){
+        this.addEventListener("wheel", handle, { passive: true });
+    }
+};
+jQuery.event.special.mousewheel = {
+    setup: function( _, ns, handle ){
+        this.addEventListener("mousewheel", handle, { passive: true });
+    }
+};
+    </script>
     <!--[if lt IE 9]>
     <html class="lt-ie9">
     <div style=' clear: both; text-align:center; position: relative;'>
