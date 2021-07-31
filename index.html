@@ -29,10 +29,10 @@
     </noscript>
     <!-- <link rel="preload" as="script" type="text/javascript" crossorigin href="/js/jquery.js" > -->
     <!-- <link rel="preload" as="script" type="text/javascript" crossorigin href="/js/jquery-migrate-1.2.1.js" > -->
-    <script type="text/javascript" src="/js/jquery.js" id="jquery_script_tag"></script>
+    <script src="/js/jquery.js" id="jquery_script_tag"></script>
     <script src="/js/jquery-migrate-1.2.1-min.js"></script>
     
-    <script type="text/javascript">
+    <script>
         jQuery.event.special.touchstart = {
     setup: function( _, ns, handle ) {
         this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
