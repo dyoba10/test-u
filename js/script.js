@@ -184,9 +184,9 @@ var ua = navigator.userAgent.toLocaleLowerCase(),
 if (!result) {
     userScale = ",user-scalable=0"
 }
-// document.getElementsByTagName('head')[0].appendChild('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
-document.innerHTML = '<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">';
-// document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
+// document.getElementsByTagName('body')[0].appendChild('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
+// document.body.innerHTML = '<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">';
+document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
 
 
 /* Camera
